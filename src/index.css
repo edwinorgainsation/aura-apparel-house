@@ -9,34 +9,59 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 20 14% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 14% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 14% 4%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 346 77% 49%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 20 14% 96%;
+    --secondary-foreground: 20 14% 4%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 20 14% 96%;
+    --muted-foreground: 20 9% 48%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 346 77% 96%;
+    --accent-foreground: 346 77% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 20 13% 91%;
+    --input: 20 13% 91%;
+    --ring: 346 77% 49%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom e-commerce colors */
+    --rose-elegant: 346 77% 49%;
+    --rose-soft: 346 77% 96%;
+    --rose-deep: 346 77% 15%;
+    --warm-neutral: 20 14% 96%;
+    --warm-dark: 20 14% 4%;
+    --fashion-accent: 280 100% 70%;
+    --luxury-gold: 45 100% 51%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(346 77% 49% / 0.1), hsl(280 100% 70% / 0.1));
+    --gradient-product: linear-gradient(180deg, transparent, hsl(0 0% 0% / 0.05));
+    --gradient-luxury: linear-gradient(135deg, hsl(346 77% 49%), hsl(280 100% 70%));
+
+    /* Shadows */
+    --shadow-elegant: 0 4px 20px hsl(346 77% 49% / 0.1);
+    --shadow-product: 0 8px 32px hsl(0 0% 0% / 0.1);
+    --shadow-luxury: 0 8px 32px hsl(346 77% 49% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
