@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Star } from "lucide-react";
+import { useStore } from "@/contexts/StoreContext";
+import { toast } from "@/hooks/use-toast";
 
 const products = [
   {
@@ -45,6 +47,43 @@ const products = [
 ];
 
 const FeaturedProducts = () => {
+  const { addToCart, addToWishlist, removeFromWishlist, isInWishlist } = useStore();
+
+  const handleAddToCart = (product: typeof products[0]) => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+    });
+    toast({
+      title: "Added to cart!",
+      description: `${product.name} has been added to your cart.`,
+    });
+  };
+
+  const handleToggleWishlist = (product: typeof products[0]) => {
+    const isLiked = isInWishlist(product.id);
+    if (isLiked) {
+      removeFromWishlist(product.id);
+      toast({
+        title: "Removed from wishlist",
+        description: `${product.name} has been removed from your wishlist.`,
+      });
+    } else {
+      addToWishlist({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.image,
+      });
+      toast({
+        title: "Added to wishlist!",
+        description: `${product.name} has been added to your wishlist.`,
+      });
+    }
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,9 +122,14 @@ const FeaturedProducts = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="absolute top-4 right-4 bg-white/80 hover:bg-white text-warm-dark hover:text-rose-elegant"
+                  className={`absolute top-4 right-4 bg-white/80 hover:bg-white ${
+                    isInWishlist(product.id) 
+                      ? 'text-rose-elegant hover:text-rose-elegant' 
+                      : 'text-warm-dark hover:text-rose-elegant'
+                  }`}
+                  onClick={() => handleToggleWishlist(product)}
                 >
-                  <Heart className="h-5 w-5" />
+                  <Heart className={`h-5 w-5 ${isInWishlist(product.id) ? 'fill-current' : ''}`} />
                 </Button>
 
                 {/* Quick Actions Overlay */}
@@ -129,7 +173,7 @@ const FeaturedProducts = () => {
                   </div>
                 </div>
 
-                <Button variant="elegant" className="w-full mt-4">
+                <Button variant="elegant" className="w-full mt-4" onClick={() => handleAddToCart(product)}>
                   Add to Cart
                 </Button>
               </div>
