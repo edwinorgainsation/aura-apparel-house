@@ -74,9 +74,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
           {/* Action Buttons */}
           <div className="mt-12 space-y-4">
-            <Button variant="ghost" className="w-full justify-start" onClick={onClose}>
-              <Search className="h-5 w-5 mr-3" />
-              Search
+            <Button variant="ghost" className="w-full justify-start" onClick={onClose} asChild>
+              <a href="/search">
+                <Search className="h-5 w-5 mr-3" />
+                Search
+              </a>
             </Button>
             <Button variant="ghost" className="w-full justify-start" onClick={onClose} asChild>
               <a href="/wishlist">

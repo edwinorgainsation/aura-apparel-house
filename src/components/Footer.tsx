@@ -32,11 +32,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Shop</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Cosmetics</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Fashion</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Shoes</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Accessories</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Sale</a></li>
+              <li><a href="/cosmetics" className="text-gray-300 hover:text-rose-elegant transition-colors">Cosmetics</a></li>
+              <li><a href="/clothes" className="text-gray-300 hover:text-rose-elegant transition-colors">Fashion</a></li>
+              <li><a href="/shoes" className="text-gray-300 hover:text-rose-elegant transition-colors">Shoes</a></li>
+              <li><a href="/search" className="text-gray-300 hover:text-rose-elegant transition-colors">All Products</a></li>
+              <li><a href="/sale" className="text-gray-300 hover:text-rose-elegant transition-colors">Sale</a></li>
             </ul>
           </div>
 
@@ -44,11 +44,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Customer Service</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Size Guide</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Shipping Info</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">Returns</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-rose-elegant transition-colors">FAQ</a></li>
+              <li><a href="/contact" className="text-gray-300 hover:text-rose-elegant transition-colors">Contact Us</a></li>
+              <li><a href="/size-guide" className="text-gray-300 hover:text-rose-elegant transition-colors">Size Guide</a></li>
+              <li><a href="/shipping" className="text-gray-300 hover:text-rose-elegant transition-colors">Shipping Info</a></li>
+              <li><a href="/returns" className="text-gray-300 hover:text-rose-elegant transition-colors">Returns</a></li>
+              <li><a href="/faq" className="text-gray-300 hover:text-rose-elegant transition-colors">FAQ</a></li>
             </ul>
           </div>
 

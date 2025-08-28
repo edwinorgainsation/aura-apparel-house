@@ -41,8 +41,10 @@ const Header = () => {
 
             {/* Actions */}
             <div className="flex items-center space-x-2">
-              <Button variant="ghost" size="icon" className="hidden sm:flex">
-                <Search className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="hidden sm:flex" asChild>
+                <a href="/search">
+                  <Search className="h-5 w-5" />
+                </a>
               </Button>
               <Button variant="ghost" size="icon" className="hidden sm:flex" asChild>
                 <a href="/wishlist">
