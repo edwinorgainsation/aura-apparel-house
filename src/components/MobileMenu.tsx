@@ -78,17 +78,21 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               <Search className="h-5 w-5 mr-3" />
               Search
             </Button>
-            <Button variant="ghost" className="w-full justify-start" onClick={onClose}>
-              <Heart className="h-5 w-5 mr-3" />
-              Wishlist
+            <Button variant="ghost" className="w-full justify-start" onClick={onClose} asChild>
+              <a href="/wishlist">
+                <Heart className="h-5 w-5 mr-3" />
+                Wishlist
+              </a>
             </Button>
             <Button variant="ghost" className="w-full justify-start" onClick={onClose}>
               <User className="h-5 w-5 mr-3" />
               Account
             </Button>
-            <Button variant="ghost" className="w-full justify-start" onClick={onClose}>
-              <ShoppingBag className="h-5 w-5 mr-3" />
-              Shopping Bag
+            <Button variant="ghost" className="w-full justify-start" onClick={onClose} asChild>
+              <a href="/cart">
+                <ShoppingBag className="h-5 w-5 mr-3" />
+                Shopping Cart
+              </a>
             </Button>
           </div>
 
